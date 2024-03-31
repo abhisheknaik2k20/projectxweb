@@ -5,14 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:projectxweb/WelcomeScreen/controllers/MenuController.dart'
     as WelcomeMenuController;
-import 'package:projectxweb/WelcomeScreen/responsive.dart';
 import 'package:projectxweb/WelcomeScreen/screens/main/components/Aboutus.dart';
-import 'package:projectxweb/WelcomeScreen/screens/main/components/Services.dart';
 import 'package:projectxweb/WelcomeScreen/screens/main/components/contactus.dart';
 
 import '../../../constants.dart';
 import 'socal.dart';
-import 'web_menu.dart';
 
 class Header extends StatefulWidget {
   @override
@@ -425,14 +422,16 @@ class _ReturnHomeState extends State<ReturnHome>
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
-                            fontFamily: 'Raleway',
                             height: 1.5,
                           ),
                         ),
                       ),
                     ),
                     Transform.translate(
-                      offset: Offset(0.0, 50 * (1 - _animation.value)),
+                      offset: Offset(
+                        0.0,
+                        50 * (1 - _animation.value),
+                      ),
                       child: FittedBox(
                         child: TextButton(
                           onPressed: () {},

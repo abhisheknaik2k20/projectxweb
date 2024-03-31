@@ -63,7 +63,6 @@ class BlogPostCard extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: Responsive.isDesktop(context) ? 32 : 24,
-                      fontFamily: "Raleway",
                       color: kDarkBlackColor,
                       height: 1.3,
                       fontWeight: FontWeight.w600,
@@ -76,41 +75,6 @@ class BlogPostCard extends StatelessWidget {
                   style: TextStyle(height: 1.5),
                 ),
                 SizedBox(height: kDefaultPadding),
-                Row(
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Container(
-                        padding: EdgeInsets.only(bottom: kDefaultPadding / 4),
-                        decoration: BoxDecoration(
-                          border: Border(
-                            bottom: BorderSide(color: kPrimaryColor, width: 3),
-                          ),
-                        ),
-                        child: Text(
-                          "Read More",
-                          style: TextStyle(color: kDarkBlackColor),
-                        ),
-                      ),
-                    ),
-                    Spacer(),
-                    IconButton(
-                      icon: SvgPicture.asset(
-                          "assets/icons/feather_thumbs-up.svg"),
-                      onPressed: () {},
-                    ),
-                    IconButton(
-                      icon: SvgPicture.asset(
-                          "assets/icons/feather_message-square.svg"),
-                      onPressed: () {},
-                    ),
-                    IconButton(
-                      icon:
-                          SvgPicture.asset("assets/icons/feather_share-2.svg"),
-                      onPressed: () {},
-                    ),
-                  ],
-                ),
               ],
             ),
           ),

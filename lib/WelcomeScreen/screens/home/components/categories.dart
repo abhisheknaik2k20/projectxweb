@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:faker/faker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -5,10 +7,38 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'sidebar_container.dart';
 
-class Categories extends StatelessWidget {
+class Categories extends StatefulWidget {
   const Categories({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<Categories> createState() => _CategoriesState();
+}
+
+class _CategoriesState extends State<Categories> {
+  ScrollController scrollController = ScrollController();
+  double counter = 0.0;
+  @override
+  void initState() {
+    super.initState();
+    _startTimer();
+  }
+
+  final List<String> randomNames =
+      List.generate(25, (index) => faker.internet.userName());
+  final List<String> randommessages =
+      List.generate(25, (index) => faker.lorem.sentence());
+
+  void _startTimer() {
+    Timer.periodic(const Duration(seconds: 2), (timer) {
+      setState(() {
+        counter = (counter + 70) % 1000;
+        scrollController.animateTo(counter,
+            duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,13 +74,15 @@ class Categories extends StatelessWidget {
             ),
             color: Colors.white,
             child: CustomScrollView(
+              controller: scrollController,
               slivers: [
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index) {
                       return Category(
-                        title: faker.person.firstName(),
+                        title: randomNames[index],
                         numOfItems: index,
+                        imageUrl: randommessages[index],
                         press: () {},
                       );
                     },
@@ -100,7 +132,7 @@ class Category extends StatelessWidget {
   final String title;
   final int numOfItems;
   final VoidCallback press;
-  final Future<String>? imageUrl;
+  final String? imageUrl;
   const Category({
     Key? key,
     required this.title,
@@ -150,6 +182,16 @@ class Category extends StatelessWidget {
           ),
           SizedBox(
             width: 10,
+          ),
+          Flexible(
+            child: Text(
+              numOfItems % 8 == 0 ? "($imageUrl!)" : '',
+              style: TextStyle(
+                color: Colors.grey.shade600,
+              ),
+              softWrap: true,
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
         ],
       ),
