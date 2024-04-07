@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:projectxweb/WelcomeScreen/models/Blog.dart';
 import 'package:projectxweb/WelcomeScreen/responsive.dart';
 
@@ -40,7 +39,7 @@ class BlogPostCard extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Design".toUpperCase(),
+                      "DESIGN",
                       style: TextStyle(
                         color: kDarkBlackColor,
                         fontSize: 12,
@@ -75,6 +74,15 @@ class BlogPostCard extends StatelessWidget {
                   style: TextStyle(height: 1.5),
                 ),
                 SizedBox(height: kDefaultPadding),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      icon: Icon(Icons.info),
+                      onPressed: () {},
+                    ),
+                  ],
+                )
               ],
             ),
           ),

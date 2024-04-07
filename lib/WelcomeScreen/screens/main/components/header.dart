@@ -81,7 +81,7 @@ class _HeaderState extends State<Header> {
                       physics: const NeverScrollableScrollPhysics(),
                       controller: _scrollController,
                       scrollDirection: Axis.horizontal,
-                      children: const [
+                      children: [
                         ReturnHome(),
                         AboutUs(),
                         ContactUs(),
@@ -155,7 +155,7 @@ class _HeaderState extends State<Header> {
                 _updateSelectedIndex();
               },
               child: Text(
-                'Services',
+                'About Us',
                 style: GoogleFonts.roboto(
                   color: Colors.white,
                   fontSize: 20,
@@ -175,98 +175,6 @@ class _HeaderState extends State<Header> {
               ),
             ),
             _controller.selectedIndex == 1
-                ? Container(
-                    height: 3,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.3),
-                          blurRadius: 4,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                  )
-                : const SizedBox.shrink(),
-          ],
-        ),
-        Column(
-          children: [
-            TextButton(
-              onPressed: () {
-                _controller.setMenuIndex(2);
-                setState(() {});
-                _updateSelectedIndex();
-              },
-              child: Text(
-                'About Us',
-                style: GoogleFonts.roboto(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: _controller.selectedIndex == 2
-                      ? FontWeight.bold
-                      : FontWeight.normal,
-                  shadows: _controller.selectedIndex == 2
-                      ? [
-                          Shadow(
-                            color: Colors.black.withOpacity(0.3),
-                            blurRadius: 4,
-                            offset: Offset(0, 2),
-                          ),
-                        ]
-                      : null,
-                ),
-              ),
-            ),
-            _controller.selectedIndex == 2
-                ? Container(
-                    height: 3,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.3),
-                          blurRadius: 4,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                  )
-                : const SizedBox.shrink(),
-          ],
-        ),
-        Column(
-          children: [
-            TextButton(
-              onPressed: () {
-                _controller.setMenuIndex(3);
-                setState(() {});
-                _updateSelectedIndex();
-              },
-              child: Text(
-                'Blog',
-                style: GoogleFonts.roboto(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: _controller.selectedIndex == 3
-                      ? FontWeight.bold
-                      : FontWeight.normal,
-                  shadows: _controller.selectedIndex == 3
-                      ? [
-                          Shadow(
-                            color: Colors.black.withOpacity(0.3),
-                            blurRadius: 4,
-                            offset: Offset(0, 2),
-                          ),
-                        ]
-                      : null,
-                ),
-              ),
-            ),
-            _controller.selectedIndex == 3
                 ? Container(
                     height: 3,
                     width: 50,

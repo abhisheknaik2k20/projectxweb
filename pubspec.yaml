@@ -68,6 +68,9 @@ dependencies:
   flutter_callkit_incoming: ^2.0.1+2
   font_awesome_flutter: ^10.7.0
   flutter_svg: ^2.0.10+1
+  animated_text_kit: ^4.2.2
+  uri: ^1.0.0
+  url_launcher: ^6.2.5
 flutter_native_splash:
   android: true
   ios: true
@@ -107,7 +110,11 @@ flutter:
     - assets/error2.json
     - assets/loading2.json
     - assets/noti.json
+    - assets/team.json
+    - assets/team.svg
+    - assets/team.png
     - assets/welcome.json
+    - assets/design.json
     - assets/imageup.png
     - assets/videoup.png
     - assets/audioup.png
@@ -120,6 +127,7 @@ flutter:
     - assets/fcmnoti.jpg
     - assets/webrtc.jpg
     - assets/bg.jpg
+    - assets/wallp.jpg
     - assets/discord.png
     - assets/avatars/0.jpg
     - assets/avatars/1.jpg
@@ -137,6 +145,10 @@ flutter:
     - assets/avatars/13.jpg
     - assets/avatars/14.jpg
     - assets/avatars/15.jpg
+    - assets/DEVS/0.jpg
+    - assets/DEVS/1.jpg
+    - assets/DEVS/2.jpg
+    - assets/DEVS/3.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

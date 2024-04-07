@@ -14,17 +14,34 @@ class RecentPosts extends StatelessWidget {
       title: "Recent Post",
       child: Column(
         children: [
-          //  RecentPostCard(
-          //    image: "assets/images/recent_1.png",
-          //    title: "Our “Secret” Formula to Online Workshops",
-          //    press: () {},
-          //  ),
-          //  SizedBox(height: kDefaultPadding),
-          //  RecentPostCard(
-          //    image: "assets/images/recent_2.png",
-          //    title: "Digital Product Innovations from Warsaw with Love",
-          //    press: () {},
-          //  ),
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.teal[500],
+            ),
+            child: const Row(
+              children: [
+                Text(
+                  'References Used',
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            ),
+          ),
+          RecentPostCard(
+            image: "assets/avatars/0.jpg",
+            title: "Our “Secret” Formula to Online Workshops",
+            press: () {},
+          ),
+          const SizedBox(height: kDefaultPadding),
+          RecentPostCard(
+            image: "assets/avatars/1.jpg",
+            title: "Digital Product Innovations from Warsaw with Love",
+            press: () {},
+          ),
         ],
       ),
     );

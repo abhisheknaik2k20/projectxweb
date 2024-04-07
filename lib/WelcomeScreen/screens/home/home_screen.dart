@@ -6,7 +6,6 @@ import '../../responsive.dart';
 import 'components/blog_post.dart';
 import 'components/categories.dart';
 import 'components/recent_posts.dart';
-import 'components/search.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -28,9 +27,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         if (!Responsive.isMobile(context)) SizedBox(width: kDefaultPadding),
-        // Sidebar
         if (!Responsive.isMobile(context))
-          Expanded(
+          const Expanded(
             child: Column(
               children: [
                 SizedBox(height: kDefaultPadding),

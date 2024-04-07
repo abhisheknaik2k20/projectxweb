@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:projectxweb/WelcomeScreen/controllers/MenuController.dart'
     as WelcomeMenuController;
@@ -22,7 +21,6 @@ class SideMenu extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                       horizontal: kDefaultPadding * 3.5),
-                  child: SvgPicture.asset("assets/icons/logo.svg"),
                 ),
               ),
               ...List.generate(

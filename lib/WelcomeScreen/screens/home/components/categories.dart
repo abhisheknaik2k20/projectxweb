@@ -110,12 +110,17 @@ class _CategoriesState extends State<Categories> {
                 SizedBox(
                   width: 10,
                 ),
-                TextButton(
+                ElevatedButton(
                   onPressed: () {},
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                      Color.fromARGB(255, 88, 101, 242),
+                    ),
+                  ),
                   child: Text(
-                    'Tap Here',
+                    'Join Server',
                     style: GoogleFonts.roboto(
-                      color: Color.fromARGB(255, 88, 101, 242),
+                      color: Color.fromARGB(255, 245, 245, 247),
                     ),
                   ),
                 )
